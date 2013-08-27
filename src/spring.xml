@@ -4,7 +4,8 @@
 <beans>	
 
 	<bean id="triangle" class="org.lvypas.Triangle">
-		<property name="type" value = "Equilateral"/>
+		<constructor-arg index = "0" value = "Equilateral"/>
+		<constructor-arg index = "1" type = "int" value = "20"/>
 	</bean>
 
 </beans>
