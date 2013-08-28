@@ -3,7 +3,17 @@
 
 <beans>
 
-	<bean id="triangle" class="org.lvypas.Triangle" autowire="byName">		
+	<bean id="parenttriangle" class="org.lvypas.Triangle">
+		<property name="pointA" ref="pointA" />
+	</bean>
+
+	<bean id="triangle1" class="org.lvypas.Triangle" parent="parenttriangle">
+		<property name="pointB" ref="pointB" />
+		<property name="pointC" ref="pointC" />
+	</bean>
+
+	<bean id="triangle2" class="org.lvypas.Triangle" parent="parenttriangle">
+		<property name="pointB" ref="pointB" />
 	</bean>
 
 	<bean id="pointA" class="org.lvypas.Point">
@@ -19,6 +29,6 @@
 	<bean id="pointC" class="org.lvypas.Point">
 		<property name="x" value="0" />
 		<property name="y" value="20" />
-	</bean>	
+	</bean>
 
 </beans>
