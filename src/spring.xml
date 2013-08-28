@@ -3,7 +3,7 @@
 
 <beans>
 
-	<bean id="triangle" class="org.lvypas.Triangle" autowire="byName">		
+	<bean id="triangle" class="org.lvypas.Triangle" autowire="byName" scope="singleton">		
 	</bean>
 
 	<bean id="pointA" class="org.lvypas.Point">
