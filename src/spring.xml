@@ -3,27 +3,20 @@
 
 <beans>
 
-	<bean id="triangle" class="org.lvypas.Triangle">
-		<property name="points">
-			<list>
-				<ref bean="zeroPoint" />
-				<ref bean="point2" />
-				<ref bean="point3" />
-			</list>
-		</property>
+	<bean id="triangle" class="org.lvypas.Triangle" autowire="byName">		
 	</bean>
 
-	<bean id="zeroPoint" class="org.lvypas.Point">
+	<bean id="pointA" class="org.lvypas.Point">
 		<property name="x" value="0" />
 		<property name="y" value="0" />
 	</bean>
 
-	<bean id="point2" class="org.lvypas.Point">
+	<bean id="pointB" class="org.lvypas.Point">
 		<property name="x" value="-20" />
 		<property name="y" value="0" />
 	</bean>
 
-	<bean id="point3" class="org.lvypas.Point">
+	<bean id="pointC" class="org.lvypas.Point">
 		<property name="x" value="0" />
 		<property name="y" value="20" />
 	</bean>	
