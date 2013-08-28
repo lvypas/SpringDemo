@@ -4,9 +4,13 @@
 <beans>
 
 	<bean id="triangle" class="org.lvypas.Triangle">
-		<property name="pointA" ref="zeroPoint" />
-		<property name="pointB" ref="point2" />
-		<property name="pointC" ref="point3" />
+		<property name="points">
+			<list>
+				<ref bean="zeroPoint" />
+				<ref bean="point2" />
+				<ref bean="point3" />
+			</list>
+		</property>
 	</bean>
 
 	<bean id="zeroPoint" class="org.lvypas.Point">
