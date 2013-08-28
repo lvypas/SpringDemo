@@ -26,6 +26,6 @@
 	<bean id="point3" class="org.lvypas.Point">
 		<property name="x" value="0" />
 		<property name="y" value="20" />
-	</bean>
+	</bean>	
 
 </beans>
