@@ -1,9 +1,6 @@
 package org.lvypas;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-
-public class Triangle implements InitializingBean, DisposableBean{
+public class Triangle {
 
     private Point pointA;
     private Point pointB;
@@ -44,7 +41,7 @@ public class Triangle implements InitializingBean, DisposableBean{
 
     }
 
-    @Override
+    /*@Override
     public void afterPropertiesSet() throws Exception {
         System.out.println("Initialization init method called for Triangle");
         
@@ -55,5 +52,12 @@ public class Triangle implements InitializingBean, DisposableBean{
         System.out.println("DisposableBean destroy method called for Triangle");
         
     }
-
+*/
+    public void myInit() {
+        System.out.println("My init method called for Triangle");
+    }
+    
+    public void cleanUp() {
+        System.out.println("My cleanup method called for Triangle");
+    }
 }
