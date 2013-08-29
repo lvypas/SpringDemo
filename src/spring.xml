@@ -20,8 +20,8 @@
 	</bean> -->
 
 	<bean id="pointA" class="org.lvypas.Point">
-		<property name="x" value="0" />
-		<property name="y" value="0" />
+		<property name="x" value="${pointA.pointX}" />
+		<property name="y" value="${pointA.pointY}" />
 	</bean>
 
 	<bean id="pointB" class="org.lvypas.Point">
@@ -34,6 +34,10 @@
 		<property name="y" value="20" />
 	</bean>
 	
-	<bean class="org.lvypas.DisplayNameBeanPostProcessor" />	
+	<bean class="org.lvypas.MyBeanFactoryPP" />	
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
+		<property name="location" value="pointsconfig.properties" />
+	</bean>
 
 </beans>
