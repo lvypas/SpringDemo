@@ -22,7 +22,7 @@
 		<property name="y" value="0" />
 	</bean>
 
-	<bean id="pointC" class="org.lvypas.Point">
+	<bean id="center" class="org.lvypas.Point">
 		<property name="x" value="0" />
 		<property name="y" value="20" />
 	</bean>
